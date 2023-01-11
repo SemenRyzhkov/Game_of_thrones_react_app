@@ -1,11 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const HeaderBlock = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 80px;
+    /* background-color: grey;
+    opacity: 0.3 */
 `;
 
 const HeaderTitle = styled.h3`
@@ -30,19 +33,19 @@ const Header = () => {
     return (
         <HeaderBlock>
             <HeaderTitle>
-                <a href="#">
+                <Link to='/'>
                 Game of Thrones DB
-                </a>
+                </Link>
             </HeaderTitle>
             <HeaderLinks>
                 <li>
-                    <a href="#">Characters</a>
+                    <Link to='/characters/'>Characters</Link>
                 </li>
                 <li>
-                    <a href="#">Houses</a>
+                    <Link to='/houses/'>Houses</Link>
                 </li>
                 <li>
-                    <a href="#">Books</a>   
+                    <Link to='/books/'>Books</Link>
                 </li>
             </HeaderLinks>
         </HeaderBlock>
